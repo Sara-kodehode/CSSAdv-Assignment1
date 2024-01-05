@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  list-style-position: inside;
+}
+
+li {
+  padding: 5px;
+  border: 1px solid black;
+  flex: 1;
+}
+
+li:hover {
+  border: 1px solid red;
+}
+
+li:active {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+li:nth-child(odd) {
+  color: grey;
+}
+
+li::before {
+  content: ">>";
+}
+
+li:focus {
+  background-color: green;
+}
+
+@media only screen and (max-width: 700px) {
+  ul {
+    flex-direction: column;
+  }
+}
